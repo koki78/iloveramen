@@ -17,13 +17,13 @@
 
     ?>
     <tr>
-        <td><?php echo $post['Category']['id']; ?></td>
+        <td><?php echo $category['Category']['id']; ?></td>
         <td>
-            <?php echo $this->Html->link($post['Category']['title'],
-array('controller' => 'categories', 'action' => 'view', $post['Category']['id'])); ?>
+            <?php echo $category['Category']['title']; ?></td>
+
         </td>
-        <td><?php echo $post['Category']['created']; ?></td>
+        <td><?php echo $category['Category']['created']; ?></td>
     </tr>
     <?php endforeach; ?>
-    <?php unset($post); ?>
+    <?php unset($category); ?>
 </table>
