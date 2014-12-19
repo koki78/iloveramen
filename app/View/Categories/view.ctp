@@ -1,7 +1,7 @@
-<!-- File: /app/View/Posts/view.ctp -->
+<!-- File: /app/View/Categoris/view.ctp -->
 
-<h1><?php echo h($post['Category']['title']); ?></h1>
+<h1><?php echo h($category['Category']['title']); ?></h1>
 
-<p><small>Created: <?php echo $post['Category']['created']; ?></small></p>
+<p><small>Created: <?php echo $category['Category']['created']; ?></small></p>
 
-<p><?php echo h($post['Category']['body']); ?> </p>
+<p><?php echo h($category['Category']['body']); ?> </p>

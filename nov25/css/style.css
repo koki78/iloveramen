@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+html {
+	font-size: 62.5%;
+}
+/*
+wapperの処理
+*/
+.wrapper {
+	/*幅*/
+	width: 1500px;
+	height: 2000px;
+	background: #
+	/*マージン*/
+	margin: 0 auto;
+}
+
+
+h2 {
+	text-align: center;
+	color: #8e44ad;
+	font-size: 1.8rem;
+
+}
+
+.header p {
+	text-align: center;
+	color: #2980b9;
+	font-family: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN",selif;
+	font-size: 1.2rem;
+	line-height: 20px;
+}
+
+/*
+contents
+*/
+
+.contents {
+	background: #ecf0f1;
+	overflow: hidden;
+}
+/*ログイン*/
+.contents .left_box {
+	width: 200px;
+	height: 300px;
+	background-color: #f1c40f;
+	border: solid #000000 2px;
+	float: left;
+	margin: 10 100px 0 0;
+}
+
+.contents .left_box h2 {
+	padding: 100px;
+}
+
+/*エリア*/
+.contents .area {
+	clear:left;
+	width: 300px;
+	height: 300px;
+	background-color: #f0f8ff;
+	border: solid #000000 2px;
+	float: left;
+	margin: 10 100px 0 0;
+}
+
+
+/*カテゴリー*/
+.contents .category {
+	clear:left;
+	width: 300px;
+	height: 300px;
+	background-color: #90ee90;
+	border: solid #000000 2px;
+	float: left;
+	margin: 10 100px 0 0;
+}
+
+.contents .left_box h2 {
+	padding: 100px;
+}
+
+/*ラーメン*/
+.contents .right_box {
+	width: 1200px;
+	height: 700px;
+	background-color: #ffe4e1;
+	float: left;
+	/*margin: 0 100px 0 0;
+	padding: 100px;*/*/
+}
+
+.contents .right_box h2 {
+	
+}
+
+/*動画*/
+.contents .right_box1 {
+	width: 500px;
+	height: 500px;
+	background-color: ##800080;
+	float: left;
+	/*margin: 0 100px 0 0;
+	padding: 100px;*/*/
+}
+
+
+
+
+/*.footer {
+	background: #ecf0f1;
+	overflow: hidden;
+}
+
+
+.footer .left_box1 {
+	clear:left;
+	width: 200px;
+	height: 400px;
+	background-color: #f1c40f;
+	border: solid #000000 2px;
+	float: left;
+	margin: 10 100px 0 0;
+}*/
+
+/*ツイッター*/
+.contents .rows .left_box1 {
+	clear:left;
+	width: 200px;
+	height: 500px;
+	background-color: #87ceeb;
+	border: solid #000000 2px;
+	float: left;
+	margin: 10 100px 0 0;
+}
+
+/*インフォメーション*/
+.contents .rows .left_box2 {
+	width: 600px;
+	height: 500px;
+	background-color: #f1c40f;
+	border: solid #000000 2px;
+	float: left;
+	margin: 10 100px 0 0;
+}
+
+
+
+
+
+
+
+
+
+

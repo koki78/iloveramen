@@ -21,15 +21,27 @@
 
 App::uses('Controller', 'Controller');
 
-/**
- * Application Controller
- *
- * Add your application-wide methods in the class below, your controllers
- * will inherit them.
- *
- * @package		app.Controller
- * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
- */
 class AppController extends Controller {
-	 public $components = array('DebugKit.Toolbar');
+
+    public $components = array(
+        'Acl',
+        'Auth' => array(
+            'authorize' => array(
+                'Actions' => array('actionPath' => 'controllers')
+            )
+        ),
+        'Session','DebugKit.Toolbar'
+    );
+    public $helpers = array('Html', 'Form', 'Session');
+
+    public function beforeFilter() {
+    	$this->Auth->allow();
+    	
+        //AuthComponentの設定
+        $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
+        $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'login');
+        $this->Auth->loginRedirect = array('controller' => 'ramens', 'action' => 'index');
+    }
+
 }
+
