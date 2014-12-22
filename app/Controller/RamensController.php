@@ -10,11 +10,11 @@ class RamensController extends AppController {
 
     public function beforeFilter(){
     	parent::beforeFilter();
-        $this->set(compact('ramens','categories','infos','ramens','areas','shops'));
+        $this->set(compact('ramens','categories','infos','areas','shops'));
     	
     }
 
-    public function index() {
+    public function index(){
     	
         $ramens = $this->Ramen->find('all');
    		//Categoryモデルを使ってデータを取得する
@@ -22,7 +22,7 @@ class RamensController extends AppController {
         $infos = $this->Info->find('all');
         $areas = $this->Area->find('all');
 
-        $this->set(compact('ramens','categories','infos','ramens','areas','shops'));
+        $this->set(compact('ramens','categories','infos','areas','shops'));
  
     }
 

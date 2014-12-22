@@ -95,6 +95,81 @@
             ); ?>
 
 <!-- ここからさくじょ -->
+		<div style = "float:left;">
+                <table>
+
+                <tr>
+                <th>Id</th>
+                <th>Photo</th>
+                <th>Category_id</th>
+                <th>area_id</th>
+               <!--  <th>Map</th> -->
+                </tr>
+
+
+    <!-- ここから、$posts配列をループして、投稿記事の情報を表示 -->
+	<!-- 左がリスト　右が一つずつ取り出す -->
+			<?php foreach ($shops[0]['Ramen'] as $ramen): ?>
+    　　　　　   <tr>  
+        　　　　 <td>
+        		<?php echo $ramen['id']; ?>
+        		</td>
+                <td>
+                <img width="100" height="100" src="http://192.168.33.10/iloveramen/files/P<?php echo str_pad($shop['Ramen'][0]['id'], 5, "0",STR_PAD_LEFT);?>">
+                 </td>
+                
+              <!--   <td><?php //echo $this->Html->link($shop['Shop']['name'],array('controller' => 'shops', 'action' => 'view', $shop['Shop']['id'])); ?>
+                </td> -->
+
+               
+           <!--      <td><?php //echo $this->Html->link($shop['Shop']['name'],array('controller'=>'shops','action' =>'shop_index',$shop['Shop']['id'])); ?>
+                </td> -->
+
+                <td>
+               
+         <!--       カテゴリーテーブルの情報を右のカテゴリー変数に一つづつ取り出す
+               カテゴリーテーブルのIdとラーメンテーブルのカテゴリーIDが一致したときに名前を取り出す
+               カテゴリーテーブルから名前を取り出してその名前を表示する -->
+            <?php 
+            foreach ($categories as $category) {
+                if ($category['Category']['id'] == $shop['Ramen'][0]['category_id']) {
+                echo h($category['Category']['name']);
+                        # code... name を表示する
+            break;
+                }
+            }
+            ?>
+                </td>
+
+            <td>
+
+            <?php 
+            foreach ($areas as $area) {
+                if ($area['Area']['id'] == $shop['Ramen'][0]['area_id']) {
+                echo h($area['Area']['name']);
+                        # code... name を表示する
+            break;
+                }
+            }
+            ?>
+                
+            </td>
+
+                </tr>
+				
+           	<?php endforeach; ?>
+
+           <p>
+           <?php echo $shops[0]['Shop']['map']; ?>
+       	   </p>
+
+ 
+<!--     <?php //foreach ($ramens as $ramen):?>                            
+
+                            <div style="float:left;">
+
+                    
+                                <img width="100" height="100" src="http://192.
         </div>
     </div>
 </div>

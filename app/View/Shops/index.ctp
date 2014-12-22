@@ -179,7 +179,9 @@
             <?php unset($shop); ?>
 
   
-            
+            <input type="submit" value="詳細ページへ">
+            <button onclick="location.href='<?php echo $this->html->url('http://192.168.33.10/iloveramen/ramens/toppage/index' . $ramen);?>';">詳細ページへ</button> 
+
 
         
                    

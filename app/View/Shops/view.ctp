@@ -3,7 +3,7 @@
         <!-- コンテンツの中のレフトボックス -->
         <div class="left_box">
 
-　　　　　<!-- エリアページ -->
+    <!-- エリアページ -->
     <!-- <form> -->
         <div class="area">
         <h1>エリア</h1></br>
@@ -17,6 +17,7 @@
 
             <?php endforeach; ?>
             <?php unset($area); ?>
+            
             <p>
             <input type="submit" value="検索">
             </br>
@@ -46,8 +47,8 @@
         </div>
 
 
-        </div>
-    </form>
+    </div>
+
 
         <!-- コンテンツの中のライトボックス -->
         <div class="right_box">
@@ -59,20 +60,18 @@
          <!--カテゴリーテーブルの情報を右のカテゴリー変数に一つづつ取り出す
                カテゴリーテーブルのIdとラーメンテーブルのカテゴリーIDが一致したときに名前を取り出す
                カテゴリーテーブルから名前を取り出してその名前を表示する-->
-               <?php if (isset($shop['Ramen'][0])){ ?>
-
-                <?php 
+               <?php if (isset($shop['Ramen'][0])){ 
                 foreach ($categories as $category) {
                     if ($category['Category']['id'] == $shop['Ramen'][0]['category_id']) {
                         echo h($category['Category']['name']);
                         # code... name を表示する
                         break;
                     }
+                  }
                 }
                 ?>
 
-            </h2>
-            	
+            </h2>	
             <img width="300" height="300" src="http://192.168.33.10/iloveramen/files/P<?php echo str_pad($shop['Shop']['id'], 5, "0",STR_PAD_LEFT);?>">
             
             <td>
@@ -108,18 +107,19 @@
         　　　　　<td><?php echo $ramen['id']; ?></td>
                 <td><img width="100" height="100" src="http://192.168.33.10/iloveramen/files/P<?php echo str_pad($shop['Ramen'][0]['id'], 5, "0",STR_PAD_LEFT);?>"></td>
                 
-              <!--   <td><?php //echo $this->Html->link($shop['Shop']['name'],array('controller' => 'shops', 'action' => 'view', $shop['Shop']['id'])); ?>
+            <!--   <td><?php //echo $this->Html->link($shop['Shop']['name'],array('controller' => 'shops', 'action' => 'view', $shop['Shop']['id'])); ?>
                 </td> -->
 
                
-           <!--      <td><?php //echo $this->Html->link($shop['Shop']['name'],array('controller'=>'shops','action' =>'shop_index',$shop['Shop']['id'])); ?>
+            <!--      <td><?php //echo $this->Html->link($shop['Shop']['name'],array('controller'=>'shops','action' =>'shop_index',$shop['Shop']['id'])); ?>
                 </td> -->
 
                 <td>
                
-         <!--       カテゴリーテーブルの情報を右のカテゴリー変数に一つづつ取り出す
+            <!--       カテゴリーテーブルの情報を右のカテゴリー変数に一つづつ取り出す
                カテゴリーテーブルのIdとラーメンテーブルのカテゴリーIDが一致したときに名前を取り出す
                カテゴリーテーブルから名前を取り出してその名前を表示する -->
+                
                 <?php 
                 foreach ($categories as $category) {
                     if ($category['Category']['id'] == $shop['Ramen'][0]['category_id']) {
@@ -178,10 +178,3 @@
         </div>
     </div>
 </div>
-          
-
-
-
-
-
-
